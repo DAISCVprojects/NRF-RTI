@@ -18,7 +18,8 @@ images in RGB space.
 - [Usage](#usage)
 - [Training](#training)
   - [Datasets](#datasets)
-  - [Demo](#demo)  - [Our Hyperparameters](#our-hyperparameters)
+  - [Preprocessing](#preprocessing)
+  - [Our Hyperparameters](#our-hyperparameters)
 - [Testig](#testing)
 - [Relighting](#relighting)
   
@@ -51,6 +52,13 @@ You can check the hyperparameters we used in section ### Our Hyperparameters
 
 ## Training
 In this section, we present the training dataset, preprocessing, and training demo.
+### Datasets
 
-## Our Hyperparameters
+### Preprocessing
+
+### Our Hyperparameters
+
+## Testing
+
+## Relighting
 
