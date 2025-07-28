@@ -22,3 +22,14 @@ images in RGB space.
 - [Testing](#testing)
 - [Relighting](#relighting)
   
+## License
+
+Details...
+
+## Get Started
+
+Instructions...
+
+## Installation
+
+Steps...
