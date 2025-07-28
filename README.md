@@ -30,6 +30,15 @@ Details...
 
 Instructions...
 
-## Installation
+### Installation
 
-Steps...
+1. clone NRF-RTI
+<pre> pip install -r requirements.txt 
+python train.py --config config.yaml </pre>
+
+2. Create an environment, for example, using conda
+<pre> conda environment creation 
+  ... </pre>4. 
+### Checkpoints
+
+
