@@ -38,12 +38,19 @@ python train.py --config config.yaml </pre>
 
 2. Create an environment, for example, using conda
 <pre> conda environment creation 
-  ... </pre>4. 
+  ... </pre>
   
 ### Checkpoints
 You can obtain our pre-trained models for each object by downloading them directly.
 
 You can check the hyperparameters we used in section ### Our Hyperparameters
 
+## Usage
+<pre> Write usage code here for relighting
+</pre>
 
+## Training
+In this section, we present the training dataset, preprocessing, and training demo.
+
+## Our Hyperparameters
 
