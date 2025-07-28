@@ -1,4 +1,4 @@
-<img width="723" height="175" alt="image" src="https://github.com/user-attachments/assets/58f87afa-054c-42b8-b8bd-18e30dc0de54" />
+<img width="966" height="171" alt="image" src="https://github.com/user-attachments/assets/12528b98-a05d-4214-96c0-9b33dbf2bb37" />
 
 Official implementation of NRF-RTI: A Neural Reflectance Field Model for Accurate Relighting in RTI Applications
 
