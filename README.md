@@ -19,7 +19,7 @@ images in RGB space.
 - [Training](#training)
   - [Datasets](#datasets)
   - [Demo](#demo)  - [Our Hyperparameters](#our-hyperparameters)
-- [Testing](#testing)
+- [Computing relighing accuracy](#accuracy)
 - [Relighting](#relighting)
   
 ## License
