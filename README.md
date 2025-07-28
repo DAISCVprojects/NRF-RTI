@@ -8,3 +8,17 @@ Our method takes as input a set of images of an object captured from various lig
 input images) and produces images under novel light directions (a). Panel (b) shows the ground truth image for the selected novel
 light, not present in the training set, while (c) is the error map depicting the Euclidean distance between the ground-truth and the reconstructed
 images in RGB space.
+
+
+# Table of Contents
+- [License](#license)
+- [Get Started](#get-started)
+  - [Installation](#installation)
+  - [Checkpoints](#checkpoints)
+- [Usage](#usage)
+- [Training](#training)
+  - [Datasets](#datasets)
+  - [Demo](#demo)  - [Our Hyperparameters](#our-hyperparameters)
+- [Testing](#testing)
+- [Relighting](#relighting)
+  
