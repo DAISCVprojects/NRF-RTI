@@ -54,17 +54,38 @@ You can check the hyperparameters we used in section ### Our Hyperparameters
 In this section, we present the training dataset, preprocessing, and training demo.
 
 ### Datasets
-We train our method on our synthetic and synthetic and real datasets of [NeuralRTI]:https://github.com/Univr-RTI/NeuralRTI 
+We train our method on our synthetic datasets and real and synthetic datasets of [NeuralRTI]:https://github.com/Univr-RTI/NeuralRTI 
+
 ### Preprocessing
 <pre> # Put the raw dataset and light direction in /NRF-RTI/datasets/
-  # Preprocess the datasets in HD5Y format
-  # You can look at the sample raw and preprocessed data in the datasets directory
-  python data_preprocess.py
+# Preprocess the datasets in HD5Y format
+# You can look at the sample raw and preprocessed data in the datasets directory
+python data_preprocess.py
    </pre>
    
 ### Our Hyperparameters
+The following are the hyperparameters for training our method.
+<pre>
+  python main.py \
+        --mode train \
+        --dataset_dir "path to your dataset" \
+        --batch_size 4096 \
+        --learning_rate 0.01 \
+        --epochs 35
+  
+ # For example, for training on Object1 dataset   
+ python main.py --mode train --dataset_dir /datasets/object1/ --batch_size 4096 --learning_rate 0.01 --epochs 35
+</pre>
 
 ## Testing
+For testing and computing evaluation metrics
+<pre>
+  python main.py \
+      --mode test \
+      -- dataset_dir "path to your dataset" 
+  # For example, for testing on Object1 dataset
+  python main.py --mode test --dataset_dir /datasets/object1/
+</pre>
 
 ## Relighting
 
