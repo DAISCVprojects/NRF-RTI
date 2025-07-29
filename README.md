@@ -55,7 +55,12 @@ In this section, we present the training dataset, preprocessing, and training de
 ### Datasets
 
 ### Preprocessing
-
+<pre> # Put the raw dataset and light direction in /NRF-RTI/datasets/
+  # You can look at the sample raw and preprocessed data in the dataset directory
+  # Preprocess the datasets in HD5Y format
+  python data_preprocess.py
+  
+   </pre>
 ### Our Hyperparameters
 
 ## Testing
