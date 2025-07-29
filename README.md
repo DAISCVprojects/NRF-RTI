@@ -28,7 +28,6 @@ Details...
 
 ## Get Started
 
-Instructions...
 
 ### Installation
 
