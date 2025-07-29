@@ -52,15 +52,16 @@ You can check the hyperparameters we used in section ### Our Hyperparameters
 
 ## Training
 In this section, we present the training dataset, preprocessing, and training demo.
-### Datasets
 
+### Datasets
+We train our method on our synthetic and synthetic and real datasets of [NeuralRTI]:https://github.com/Univr-RTI/NeuralRTI 
 ### Preprocessing
 <pre> # Put the raw dataset and light direction in /NRF-RTI/datasets/
-  # You can look at the sample raw and preprocessed data in the dataset directory
   # Preprocess the datasets in HD5Y format
+  # You can look at the sample raw and preprocessed data in the datasets directory
   python data_preprocess.py
-  
    </pre>
+   
 ### Our Hyperparameters
 
 ## Testing
