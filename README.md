@@ -33,21 +33,24 @@ Instructions...
 ### Installation
 
 1. clone NRF-RTI
-<pre> pip install -r requirements.txt 
-python train.py --config config.yaml </pre>
+<pre>  
+git clone --recursive https://github.com/DAISCVprojects/NRF-RTI
+cd NRF-RTI
+# If you have already cloned NRF-RTI:
+# git submodule update --init --recursive
+ </pre>
 
 2. Create an environment, for example, using conda
-<pre> conda environment creation 
-  ... </pre>
+<pre> 
+conda create -n RTI python=3.10.9
+conda activate RTI
+pip install -r requirements.txt
+</pre>
   
 ### Checkpoints
 You can obtain our pre-trained models for each object by downloading them directly.
 
 You can check the hyperparameters we used in section ### Our Hyperparameters
-
-## Usage
-<pre> Write usage code here for relighting
-</pre>
 
 ## Training
 In this section, we present the training dataset, preprocessing, and training demo.
