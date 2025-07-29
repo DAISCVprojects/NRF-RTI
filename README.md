@@ -49,7 +49,7 @@ pip install -r requirements.txt
 ### Checkpoints
 You can obtain our pre-trained models for each object by downloading them directly.
 
-You can check the hyperparameters we used in section ### Our Hyperparameters
+You can check the hyperparameters we used in section [Our Hyperparameters](#our-hyperparameters)
 
 ## Training
 In this section, we present the training dataset, preprocessing, and training demo.
