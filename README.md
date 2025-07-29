@@ -15,7 +15,6 @@ images in RGB space.
 - [Get Started](#get-started)
   - [Installation](#installation)
   - [Checkpoints](#checkpoints)
-- [Usage](#usage)
 - [Training](#training)
   - [Datasets](#datasets)
   - [Preprocessing](#preprocessing)
@@ -78,14 +77,21 @@ The following are the hyperparameters for training our method.
 </pre>
 
 ## Testing
-For testing and computing evaluation metrics
+To test our method on test images and compute evaluation metrics
 <pre>
   python main.py \
       --mode test \
-      -- dataset_dir "path to your dataset" 
+      --dataset_dir "path to your dataset" 
+      --output_dir "path to saving output dir"
   # For example, for testing on Object1 dataset
-  python main.py --mode test --dataset_dir /datasets/object1/
+  python main.py --mode test --dataset_dir /datasets/object1/ --output_dir /datasets/object1/output/
 </pre>
 
 ## Relighting
-
+For relighting an object from any arbitrary light direction (requires only the light direction)
+<pre>
+  python relight.py --dataset_dir "path where model checkpoint, light direction, and latent code are saved"
+  # For example, for relighting on a random light direction 
+  # assuming that checkpoint, latent code, and light direction are saved in /datasets/object1/
+  python relight.py --dataset_dir /datasets/object1/
+</pre>
