@@ -66,14 +66,14 @@ python data_preprocess.py
    
 ### Our Hyperparameters
 The following are the hyperparameters for training our method.
-<pre>
+<pre> 
   python main.py \
         --mode train \
         --dataset_dir "path to your dataset" \
         --batch_size 4096 \
         --learning_rate 0.01 \
         --epochs 35
-  
+
  # For example, for training on Object1 dataset   
  python main.py --mode train --dataset_dir /datasets/object1/ --batch_size 4096 --learning_rate 0.01 --epochs 35
 </pre>
