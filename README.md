@@ -3,7 +3,7 @@
 
 Official implementation of NRF-RTI: A Neural Reflectance Field Model for Accurate Relighting in RTI Applications
 
-<img width="1420" height="386" alt="Screenshot 2025-07-28 at 20 36 52" src="https://github.com/user-attachments/assets/934486f8-87b6-45c5-a5ef-08223dbdb128" />
+<img width="1420" height="386" alt="Screenshot 2025-07-28 at 20 36 52-min" src="https://github.com/user-attachments/assets/3a35ea5f-0e4e-47a6-8065-58dab413fb30" />
 During training, our method takes as input a set of images of an object captured from various lighting directions (in this example, we used 80
 input images) and produces images under novel light directions (a). Panel (b) shows the ground truth image for the selected novel
 light, not present in the training set, while (c) is the error map depicting the Euclidean distance between the ground-truth and the reconstructed
