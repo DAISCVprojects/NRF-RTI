@@ -72,12 +72,13 @@ The following are the hyperparameters for training our method.
         --mode train \
         --dataset_dir "path to your dataset" \
         --save_dir  "path checkpoint saving dir" \
+        --pca  "number of PCA components" \
         --batch_size 4096 \
         --learning_rate 0.01 \
         --epochs 35
 
  # For example, for training on our Synthetic Object1 dataset   
- python main.py --mode train --dataset_dir Dataset/synthOur/Object1/ --save_dir Dataset/synthOur/Object1/saved_model/ --batch_size 4096 --learning_rate 0.01 --epochs 35
+ python main.py --mode train --dataset_dir Dataset/synthOur/Object1/ --save_dir Dataset/synthOur/Object1/saved_model/ --pca 20 --batch_size 4096 --learning_rate 0.01 --epochs 35
 </pre>
 
 ## Testing
