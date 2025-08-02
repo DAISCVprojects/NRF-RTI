@@ -71,12 +71,13 @@ The following are the hyperparameters for training our method.
   python main.py \
         --mode train \
         --dataset_dir "path to your dataset" \
+        --save_dir  "path checkpoint saving dir" 
         --batch_size 4096 \
         --learning_rate 0.01 \
         --epochs 35
 
- # For example, for training on Object1 dataset   
- python main.py --mode train --dataset_dir /Dataset/object1/ --batch_size 4096 --learning_rate 0.01 --epochs 35
+ # For example, for training on our Synthetic Object1 dataset   
+ python main.py --mode train --dataset_dir Dataset/synthOur/Object1/ --save_dir Dataset/synthOur/Object1/saved_model/ --batch_size 4096 --learning_rate 0.01 --epochs 35
 </pre>
 
 ## Testing
@@ -87,8 +88,8 @@ To test our method on test images and compute evaluation metrics
       --dataset_dir "path to your dataset" 
       --output_dir "path to saving output dir"
   
-  # For example, for testing on Object1 dataset
-  python main.py --mode test --dataset_dir /Dataset/object1/ --output_dir /Dataset/object1/output/
+  # For example, for testing on our Synthetic Object1 dataset
+  python main.py --mode test --dataset_dir Dataset/synthOur/Object1/ --output_dir Dataset/synthOur/Object1/output/
 </pre>
 
 ## Relighting
@@ -97,7 +98,7 @@ For relighting an object from any arbitrary light direction (requires only the l
   python relight.py --dataset_dir "path to model checkpoint, light direction, and compressed latent code"
   
   # For example, for relighting on a set of random light directions 
-  # assuming that checkpoint, latent code, and light direction are saved in /Dataset/object1/
-  python relight.py --dataset_dir /Dataset/object1/
+  # assuming that checkpoint, latent code, and light direction are saved in Dataset/synthOur/Object1/
+  python relight.py --dataset_dir Dataset/synthOur/Object1/
 </pre>
 
