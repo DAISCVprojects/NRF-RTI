@@ -86,6 +86,7 @@ To test our method on test images and compute evaluation metrics
       --mode test \
       --dataset_dir "path to your dataset" 
       --output_dir "path to saving output dir"
+  
   # For example, for testing on Object1 dataset
   python main.py --mode test --dataset_dir /Dataset/object1/ --output_dir /Dataset/object1/output/
 </pre>
@@ -94,6 +95,7 @@ To test our method on test images and compute evaluation metrics
 For relighting an object from any arbitrary light direction (requires only the light direction)
 <pre>
   python relight.py --dataset_dir "path to model checkpoint, light direction, and compressed latent code"
+  
   # For example, for relighting on a set of random light directions 
   # assuming that checkpoint, latent code, and light direction are saved in /Dataset/object1/
   python relight.py --dataset_dir /Dataset/object1/
