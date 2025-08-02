@@ -100,3 +100,4 @@ For relighting an object from any arbitrary light direction (requires only the l
   # assuming that checkpoint, latent code, and light direction are saved in /Dataset/object1/
   python relight.py --dataset_dir /Dataset/object1/
 </pre>
+
