@@ -58,10 +58,10 @@ In this section, we present the training dataset, preprocessing, and training de
 We train our method on our synthetic datasets and real and synthetic datasets of [NeuralRTI]:https://github.com/Univr-RTI/NeuralRTI 
 
 ### Preprocessing
-<pre> # Put the raw dataset and light direction in /NRF-RTI/Dataset/
-# Preprocess the datasets in HD5Y format
-# You can look at the sample raw and preprocessed data in the datasets directory
+<pre> # Put the train/test split raw dataset and light direction in /NRF-RTI/Dataset/
+# To preprocess the datasets in HDF5 format, run
 python data_preprocess.py
+# You can look at the sample raw and preprocessed data in /NRF-RTI/Dataset/
    </pre>
    
 ### Our Hyperparameters
@@ -92,8 +92,8 @@ To test our method on test images and compute evaluation metrics
 ## Relighting
 For relighting an object from any arbitrary light direction (requires only the light direction)
 <pre>
-  python relight.py --dataset_dir "path where model checkpoint, light direction, and latent code are saved"
-  # For example, for relighting on a random light direction 
+  python relight.py --dataset_dir "path to model checkpoint, light direction, and compressed latent code"
+  # For example, for relighting on a set of random light directions 
   # assuming that checkpoint, latent code, and light direction are saved in /Dataset/object1/
   python relight.py --dataset_dir /Dataset/object1/
 </pre>
