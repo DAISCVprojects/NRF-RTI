@@ -71,7 +71,7 @@ The following are the hyperparameters for training our method.
   python main.py \
         --mode train \
         --dataset_dir "path to your dataset" \
-        --save_dir  "path checkpoint saving dir" 
+        --save_dir  "path checkpoint saving dir" \
         --batch_size 4096 \
         --learning_rate 0.01 \
         --epochs 35
@@ -85,7 +85,7 @@ To test our method on test images and compute evaluation metrics
 <pre>
   python main.py \
       --mode test \
-      --dataset_dir "path to your dataset" 
+      --dataset_dir "path to your dataset" \
       --output_dir "path to saving output dir"
   
   # For example, for testing on our Synthetic Object1 dataset
