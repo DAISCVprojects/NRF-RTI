@@ -58,7 +58,8 @@ In this section, we present the training dataset, preprocessing, and training de
 We train our method on our synthetic datasets and real and synthetic datasets of [NeuralRTI]:https://github.com/Univr-RTI/NeuralRTI 
 
 ### Preprocessing
-<pre> # Put the train/test split raw dataset and light direction in /NRF-RTI/Dataset/
+<pre> 
+# Put the train/test split raw dataset and light direction in /NRF-RTI/Dataset/
 # To preprocess the datasets in HDF5 format, run
 python data_preprocess.py
 # You can look at the sample raw and preprocessed data in /NRF-RTI/Dataset/
