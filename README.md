@@ -20,7 +20,7 @@ images in RGB space.
   - [Preprocessing](#preprocessing)
   - [Our Hyperparameters](#our-hyperparameters)
 - [Testig](#testing)
-- [Relighting](#relighting)
+- [Usage](#usage)
   
 ## License
 
@@ -93,7 +93,7 @@ To test our method on test images and compute evaluation metrics
   python main.py --mode test --dataset_dir Dataset/synthOur/Object1/ --output_dir Dataset/synthOur/Object1/output/
 </pre>
 
-## Relighting
+## Usage
 For relighting an object from any arbitrary light direction (requires only the light direction)
 <pre>
   python relight.py --dataset_dir "path to model checkpoint, light direction, and compressed latent code"
