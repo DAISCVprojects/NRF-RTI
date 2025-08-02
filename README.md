@@ -58,7 +58,7 @@ In this section, we present the training dataset, preprocessing, and training de
 We train our method on our synthetic datasets and real and synthetic datasets of [NeuralRTI]:https://github.com/Univr-RTI/NeuralRTI 
 
 ### Preprocessing
-<pre> # Put the raw dataset and light direction in /NRF-RTI/datasets/
+<pre> # Put the raw dataset and light direction in /NRF-RTI/Dataset/
 # Preprocess the datasets in HD5Y format
 # You can look at the sample raw and preprocessed data in the datasets directory
 python data_preprocess.py
@@ -75,7 +75,7 @@ The following are the hyperparameters for training our method.
         --epochs 35
 
  # For example, for training on Object1 dataset   
- python main.py --mode train --dataset_dir /datasets/object1/ --batch_size 4096 --learning_rate 0.01 --epochs 35
+ python main.py --mode train --dataset_dir /Dataset/object1/ --batch_size 4096 --learning_rate 0.01 --epochs 35
 </pre>
 
 ## Testing
@@ -86,7 +86,7 @@ To test our method on test images and compute evaluation metrics
       --dataset_dir "path to your dataset" 
       --output_dir "path to saving output dir"
   # For example, for testing on Object1 dataset
-  python main.py --mode test --dataset_dir /datasets/object1/ --output_dir /datasets/object1/output/
+  python main.py --mode test --dataset_dir /Dataset/object1/ --output_dir /Dataset/object1/output/
 </pre>
 
 ## Relighting
@@ -94,6 +94,6 @@ For relighting an object from any arbitrary light direction (requires only the l
 <pre>
   python relight.py --dataset_dir "path where model checkpoint, light direction, and latent code are saved"
   # For example, for relighting on a random light direction 
-  # assuming that checkpoint, latent code, and light direction are saved in /datasets/object1/
-  python relight.py --dataset_dir /datasets/object1/
+  # assuming that checkpoint, latent code, and light direction are saved in /Dataset/object1/
+  python relight.py --dataset_dir /Dataset/object1/
 </pre>
