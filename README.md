@@ -55,7 +55,9 @@ You can check the hyperparameters we used in section [Our Hyperparameters](#our-
 In this section, we present the training dataset, preprocessing, and training demo.
 
 ### Datasets
-We train our method on our synthetic datasets and real and synthetic datasets of [NeuralRTI]:https://github.com/Univr-RTI/NeuralRTI 
+We train our method on our synthetic datasets and datasets from [NeuralRTI]:https://github.com/Univr-RTI/NeuralRTI 
+#### Rendering
+
 
 ### Preprocessing
 <pre> 
