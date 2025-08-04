@@ -76,7 +76,7 @@ Please follow the procedures provided in the README file in '/Render/'
 # Put the train/test split raw dataset and light direction in /NRF-RTI/Dataset/
 # To preprocess the datasets in HDF5 format, run
 python data_preprocess.py
-# You can look at the sample raw and preprocessed data in /NRF-RTI/Dataset/
+# You can look at the sample raw and preprocessed data in /NRF-RTI/Dataset/Object1/
    </pre>
    
 ### Our Hyperparameters
