@@ -9,6 +9,14 @@ input images) and produces images under novel light directions (a). Panel (b) sh
 light, not present in the training set, while (c) is the error map depicting the Euclidean distance between the ground-truth and the reconstructed
 images in RGB space.
 
+<pre>
+@ComingSoon{NRF-RTI_ACM_TOG2025,
+      title={A Neural Reflectance Field Model for Accurate Relighting in RTI Applications}, 
+      author={Shambel Fente Mengistu, Filippo Bergamasco, and Mara Pistellato},
+      booktitle = {ACM Trans. Graph.},
+      year = {2025}
+}
+</pre>
 
 # Table of Contents
 - [License](#license)
