@@ -56,7 +56,7 @@ pip install -r requirements.txt
 </pre>
   
 ### Checkpoints
-You can obtain our pre-trained models for each object by downloading them directly.
+You can obtain our pre-trained models for our synthetic dataset in '/Dataset/Object*'.
 
 You can check the hyperparameters we used in section [Our Hyperparameters](#our-hyperparameters)
 
