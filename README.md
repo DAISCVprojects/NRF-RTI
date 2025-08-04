@@ -58,13 +58,13 @@ pip install -r requirements.txt
 ### Checkpoints
 You can obtain our pre-trained models for our synthetic dataset in '/Dataset/Object*'.
 
-You can check the hyperparameters we used in section [Our Hyperparameters](#our-hyperparameters)
+You can check the hyperparameters we used in section [Our Hyperparameters](#our-hyperparameters).
 
 ## Training
 In this section, we present the training dataset, preprocessing, and training demo.
 
 ### Datasets
-We train our method on our synthetic datasets and datasets from [NeuralRTI]:https://github.com/Univr-RTI/NeuralRTI 
+We train our method on our synthetic datasets and datasets from [NeuralRTI]:https://github.com/Univr-RTI/NeuralRTI. 
 We released our synthetic dataset together with the code. The datasets for each object are located in '/Dataset/
 
 #### Rendering
