@@ -65,6 +65,8 @@ In this section, we present the training dataset, preprocessing, and training de
 
 ### Datasets
 We train our method on our synthetic datasets and datasets from [NeuralRTI]:https://github.com/Univr-RTI/NeuralRTI 
+We released our synthetic dataset together with the code. The datasets for each object are located in '/Dataset/
+
 #### Rendering
 You can render and generate  as many images as you want by running our rendering script.
 Please follow the procedures provided in the README file in '/Render/' 
