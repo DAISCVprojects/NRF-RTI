@@ -58,7 +58,8 @@ In this section, we present the training dataset, preprocessing, and training de
 ### Datasets
 We train our method on our synthetic datasets and datasets from [NeuralRTI]:https://github.com/Univr-RTI/NeuralRTI 
 #### Rendering
-
+You can render and generate  as many images as you want by running our rendering script.
+Please follow the procedures provided in the README file in '/Render/' 
 
 ### Preprocessing
 <pre> 
