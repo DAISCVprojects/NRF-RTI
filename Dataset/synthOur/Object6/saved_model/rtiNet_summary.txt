@@ -1,0 +1,16 @@
+ARGUMENTS
+batch_size: 4096
+dataset_dir: /home/shambel/RTI/Ablation/Different_pca_size/pca20_synthOur/Object6/
+dataset_dir_raw: /home/shambel/RTI/Ablation/Different_pca_size/pca30_synthOur/Object9/
+device: cuda
+epochs: 50
+learning_rate: 0.01
+mode: train
+model_name: rtiNet
+pca: 10
+resume: False
+workers: 8
+
+BEST VALIDATION
+Epoch: 50
+Mean IoU: 0.0033461476105003385

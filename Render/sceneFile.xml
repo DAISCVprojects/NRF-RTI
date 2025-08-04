@@ -1,0 +1,128 @@
+<scene version="3.0.0">
+    <default name="spp" value="256"/>
+    <default name="res" value="256"/>
+    <default name="max_depth" value="12"/>
+    <default name="integrator" value="path"/>
+    <integrator type='$integrator'>
+        <integer name="max_depth" value="$max_depth"/>
+    </integrator>
+
+    <sensor type="perspective" id="sensor">
+        <string name="fov_axis" value="smaller"/>
+        <float name="near_clip" value="0.001"/>
+        <float name="far_clip" value="100.0"/>
+        <float name="focus_distance" value="1000"/>
+        <float name="fov" value="39.3077"/>
+        <!--origin is camera position, fixed once-->
+        <!--target is object position, fixed once-->
+        <transform name="to_world">
+            <lookat origin="0,  0,  1"
+                    target="0,  0.0,  0"
+                    up    ="0,  1,  0"/>
+        </transform>
+        <sampler type="independent">
+            <integer name="sample_count" value="$spp"/>
+        </sampler>
+        <film type="hdrfilm">
+            <integer name="width"  value="$res"/>
+            <integer name="height" value="$res"/>
+            <rfilter type="tent"/>
+            <string name="pixel_format" value="rgb"/>
+            <string name="component_format" value="float32"/>
+        </film>
+    </sensor>
+
+    <!-- BSDFs --> 
+     <!-- Here read the material -->
+    <bsdf type="measured" id="measured_mat">
+        <string name="filename" value="/home/shambel/RTI_gray/rendering/Data_homogeneous/Material/ilm_l3_37_metallic_rgb06.bsdf"/>
+    </bsdf>
+
+    <!-- Light -->
+    <!-- Light -->
+    <!--origin indicates position of the light with randomly initialized position-->
+    <!--targer indicates position of the object to be lighted, fixed once(can choose shape translation vector)-->
+     <!--please adjust the irradiance value by trying different values, the quality of the rendered image depends on the irradiance value too-->
+    <emitter type="directional">
+        <rgb name="irradiance" value="5"/>    <!-- choose 2 , 5 , 10, 15 depending on the matrial -->
+        <transform name="to_world">
+        <lookat origin="0.1228,    0.1228,    0.9848"
+                target="0.0, 0.0, 0"
+                up="0, 1, 0"/>
+        </transform>
+    </emitter>
+
+    <!--Tandon01.py-->
+    <!-- Shapes -->
+    <shape type="ply" id="scene">
+        <string name="filename" value="/home/shambel/RTI_gray/rendering/Data_homogeneous/Model/Tondo01.ply"/>
+        <transform name="to_world">
+            <scale value="0.0024"/>
+            <translate x="0.0" y="-0.05" z="0.0"/>
+        </transform>
+        <ref id="measured_mat"/>
+    </shape>
+</scene>
+
+
+
+    <!--
+    >>>>>Please update the code with the following fills with the right object to be rendered if you want to render a ready made object<<<<<<<<<<<<    
+        >>>>>otherwise you have to rescale each geometric model<<<<<<<<<<<< 
+    # Object1 (Tondo01.ply)
+    <rgb name="irradiance" value="5"/>, material6, material7 = 3, material9 = 2, all others = 5
+    <shape type="ply" id="scene">
+        <string name="filename" value="/Users/shambelfentemengistu/RTI_backup/RTI/rendering/Data_homogeneous/Model/Tondo1.ply"/>
+        <transform name="to_world">
+            <scale value="0.0024"/>
+            <translate x="0.0" y="-0.05" z="0.0"/>
+        </transform>
+        <ref id="measured_mat"/>
+    </shape>
+
+    
+    # Object2 (horses04.ply)
+    <rgb name="irradiance" value="10"/>, material4, 6, 7, 8=3, material5 = 5, material9 = 2, all others = 10
+     <shape type="ply" id="scene">
+        <string name="filename" value="/Users/shambelfentemengistu/RTI_backup/RTI/rendering/Data_homogeneous/Model/horses2.ply"/>
+        <transform name="to_world">
+            <scale value="0.9"/>
+            <translate x="-0.02" y="0.0" z="0.0"/>
+        </transform>
+        <ref id="measured_mat"/>
+    </shape>
+    
+    # Object3 (Ta Prohm02.ply)
+    <rgb name="irradiance" value="5"/>, material4, 6, 7=3, material5,8 = 5, material9 = 2, material3 = 10
+    <shape type="ply" id="scene">
+        <string name="filename" value="/Users/shambelfentemengistu/RTI_backup/RTI/rendering/Data_homogeneous/Model/Ta Prohm3.ply"/>
+        <transform name="to_world">
+            <scale value="0.00044"/>
+            <translate x="-0.05" y="-0.05" z="0.0"/>
+        </transform>
+        <ref id="measured_mat"/>
+    </shape>
+   
+   # Object4(Bas Relief Bayon05.ply)
+    <rgb name="irradiance" value="5"/>, material4, 6, 7=3, material5=5,8 = 2, material9 = 2, material3 = 5
+    <shape type="ply" id="scene">
+        <string name="filename" value="/Users/shambelfentemengistu/RTI_backup/RTI/rendering/Data_homogeneous/Model/Bas Relief Bayon4.ply"/>
+        <transform name="to_world">
+            <scale value="0.00024"/>
+            <translate x="0.0" y="-0.05" z="0.0"/>
+        </transform>
+        <ref id="measured_mat"/>
+    </shape>
+
+   # Object5(lion03.ply)
+   <rgb name="irradiance" value="5"/> 
+    <shape type="ply" id="scene">
+        <string name="filename" value="/Users/shambelfentemengistu/RTI_backup/RTI/rendering/Data_homogeneous/Model/lion5.ply"/>
+        <transform name="to_world">
+            <scale value="0.5"/>
+            <translate x="0.0" y="0.0" z="0.0"/>
+        </transform>
+        <ref id="measured_mat"/>
+    </shape>
+    -->
+

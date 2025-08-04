@@ -1,0 +1,143 @@
+<scene version="3.0.0">
+    <default name="spp" value="256"/>
+    <default name="res" value="256"/>
+    <default name="max_depth" value="12"/>
+    <default name="integrator" value="path"/>
+
+    <integrator type='$integrator'>
+        <integer name="max_depth" value="$max_depth"/>
+    </integrator>
+
+    <sensor type="perspective" id="sensor">
+        <string name="fov_axis" value="smaller"/>
+        <float name="near_clip" value="0.001"/>
+        <float name="far_clip" value="100.0"/>
+        <float name="focus_distance" value="1000"/>
+        <float name="fov" value="39.3077"/>
+        <!--origin is camera position, fixed once-->
+        <!--target is object position, fixed once-->
+        <transform name="to_world">
+            <lookat origin="0,  0,  1"
+                    target="0,  0.0,  0"
+                    up    ="0,  1,  0"/>
+        </transform>
+        <sampler type="independent">
+            <integer name="sample_count" value="$spp"/>
+        </sampler>
+        <film type="hdrfilm">
+            <integer name="width"  value="$res"/>
+            <integer name="height" value="$res"/>
+            <rfilter type="tent"/>
+            <string name="pixel_format" value="rgb"/>
+            <string name="component_format" value="float32"/>
+        </film>
+    </sensor>
+
+    <!-- BSDFs -->
+    
+    <bsdf type="roughplastic" id="material_id">
+        <texture type = "bitmap" name = "diffuse_reflectance">
+           <string name = "filename" value = "/home/shambel/RTI/Rendering/Material_Object/Object8/cabbage_texture.png"/>
+        </texture>
+    </bsdf>
+    
+    <bsdf type="diffuse" id="white">
+        <rgb name="reflectance" value="0.85809, 0.8809, 0.809"/>
+    </bsdf>
+
+    <bsdf type="conductor" id="mirror"/>
+    <bsdf type="diffuse" id="glass"/>
+    <!-- Light -->
+    <!--origin indicates position of the light, takes many positions-->
+    <!--targer indicates position of the object to be lighted, fixed once(can choose shape translation vector)-->
+    <emitter type="directional">
+        <rgb name="irradiance" value="10"/>
+        <transform name="to_world">
+        <lookat origin="0.179,     0.330,     0.859"
+                target="0.0, 0.0, 0"
+                up="0, 1, 0"/>
+        </transform>
+    </emitter>
+
+
+    <!-- Shapes -->
+     <shape type="obj" id="scene">
+        <string name="filename" value="/home/shambel/RTI/Rendering/Material_Object/Object8/cabbage_model02.obj"/>
+        <transform name="to_world">
+            <scale value="0.028"/>  
+            <translate x="0.0" y="-0.03" z="0.0"/>
+        </transform>
+        <ref id="material_id"/>
+    </shape>
+</scene>
+
+
+
+
+
+
+<!-- 
+
+    <shape type="obj" id="scene">
+        <string name="filename" value="/Users/shambelfentemengistu/RTI_backup/RTI/rendering/Data_textured/Model/panel-for-a-cabinet-door-late9.obj"/>
+        <transform name="to_world">
+            <scale value="0.0045"/>  
+            <translate x="-0.02" y="-0.03" z="0"/>
+        </transform>
+        <ref id="material_id"/>
+    </shape>
+    <bsdf type="diffuse" id="material_id">
+        <texture type = "bitmap" name = "reflectance">
+           <string name = "filename" value = "/home/shambel/RTI/Rendering/Material_Object/Object9/panel-for-a-cabinet-door-late.jpg"/>
+        </texture>
+    </bsdf>
+
+   
+   irradiance  = 10
+    <shape type="obj" id="scene">
+        <string name="filename" value="/Users/shambelfentemengistu/RTI_backup/RTI/rendering/Data_textured/Model/cabbage_model8.obj"/>
+        <transform name="to_world">
+            <scale value="0.028"/>  
+            <translate x="0.0" y="-0.03" z="0.0"/>
+        </transform>
+        <ref id="material_id"/>
+    </shape>
+     <bsdf type="roughplastic" id="material_id">
+        <texture type = "bitmap" name = "diffuse_reflectance">
+           <string name = "filename" value = "/home/shambel/RTI/Rendering/Material_Object/Object8/cabbage_texture.png"/>
+        </texture>
+    </bsdf>
+    
+
+    irradiance = 5
+    <shape type="obj" id="scene">
+        <string name="filename" value="/Users/shambelfentemengistu/RTI_backup/RTI/rendering/Data_textured/Model/theodore6.obj"/>
+        <transform name="to_world">
+            <scale value="0.0015"/>  
+            <translate x="0.0" y="-0.03" z="0.0"/>
+        </transform>
+        <ref id="material_id"/>
+    </shape>
+    <bsdf type="diffuse" id="material_id">
+        <texture type = "bitmap" name = "reflectance">
+           <string name = "filename" value = "/home/shambel/RTI/Rendering/Material_Object/Object6/theodore-roosevelt-bronze-relief-diffuse.jpg"/>
+        </texture>
+    </bsdf>
+
+
+   irradiance =5
+    <shape type="obj" id="scene">
+        <string name="filename" value="/Users/shambelfentemengistu/RTI_backup/RTI/rendering/Data_textured/Model/andrew7.obj"/>
+        <transform name="to_world">
+            <scale value="0.013"/>   
+            <translate x="0.0" y="-0.01" z="0.0"/>
+        </transform>
+        <ref id="material_id"/>
+    </shape>
+    <bsdf type="diffuse" id="material_id">
+        <texture type = "bitmap" name = "reflectance">
+           <string name = "filename" value = "/home/shambel/RTI/Rendering/Material_Object/Object7/andrew.jpg"/>
+        </texture>
+    </bsdf>
+
+  -->
