@@ -17,6 +17,7 @@ images in RGB space.
   - [Checkpoints](#checkpoints)
 - [Training](#training)
   - [Datasets](#datasets)
+    - [Rendering](#rendering)
   - [Preprocessing](#preprocessing)
   - [Our Hyperparameters](#our-hyperparameters)
 - [Testig](#testing)
