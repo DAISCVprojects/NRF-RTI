@@ -11,17 +11,17 @@ images in RGB space.
 
 <pre>
 @article{10.1145/3759452,
-author = {Mengistu, Shambel Fente and Bergamasco, Filippo and Pistellato, Mara},
-title = {A Neural Reflectance Field Model for Accurate Relighting in RTI Applications},
-year = {2025},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-issn = {0730-0301},
-url = {https://doi.org/10.1145/3759452},
-doi = {10.1145/3759452},
-journal = {ACM Trans. Graph.},
-month = aug,
-}
+         author = {Mengistu, Shambel Fente and Bergamasco, Filippo and Pistellato, Mara},
+         title = {A Neural Reflectance Field Model for Accurate Relighting in RTI Applications},
+         year = {2025},
+         publisher = {Association for Computing Machinery},
+         address = {New York, NY, USA},
+         issn = {0730-0301},
+         url = {https://doi.org/10.1145/3759452},
+         doi = {10.1145/3759452},
+         journal = {ACM Trans. Graph.},
+         month = aug,
+       }
 </pre>
 
 # Table of Contents
