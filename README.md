@@ -39,7 +39,7 @@ images in RGB space.
   
 ## License
 
-Details...
+MIT License
 
 ## Get Started
 
