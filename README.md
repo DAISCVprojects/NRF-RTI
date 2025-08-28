@@ -10,11 +10,17 @@ light, not present in the training set, while (c) is the error map depicting the
 images in RGB space.
 
 <pre>
-<span style="color:red">@ComingSoon</span>{NRF-RTI_ACM_TOG2025,
-      title={A Neural Reflectance Field Model for Accurate Relighting in RTI Applications}, 
-      author={Shambel Fente Mengistu, Filippo Bergamasco, and Mara Pistellato},
-      booktitle = {ACM Trans. Graph.},
-      year = {2025}
+@article{10.1145/3759452,
+author = {Mengistu, Shambel Fente and Bergamasco, Filippo and Pistellato, Mara},
+title = {A Neural Reflectance Field Model for Accurate Relighting in RTI Applications},
+year = {2025},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+issn = {0730-0301},
+url = {https://doi.org/10.1145/3759452},
+doi = {10.1145/3759452},
+journal = {ACM Trans. Graph.},
+month = aug,
 }
 </pre>
 
